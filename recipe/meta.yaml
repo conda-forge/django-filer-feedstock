@@ -1,6 +1,6 @@
 {% set name = "django-filer" %}
-{% set version = "1.3.0" %}
-{% set sha256 = "694fed2d8a3468ab303c1922215c5007f8b60fd4893063038e2fedf685241030" %}
+{% set version = "1.3.2" %}
+{% set sha256 = "192b8039d167d1fc71423f65dd0d9b67a296f4336a942dba95bcadc1fb734d81" %}
 
 package:
   name: {{ name|lower }}
