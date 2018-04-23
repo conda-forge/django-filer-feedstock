@@ -14,12 +14,15 @@ A file management application for django that makes handling of files and images
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/django-filer-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/django-filer-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/django-filer-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/django-filer-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/django-filer/badges/version.svg)](https://anaconda.org/conda-forge/django-filer)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/django-filer/badges/downloads.svg)](https://anaconda.org/conda-forge/django-filer)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-django--filer-green.svg)](https://anaconda.org/conda-forge/django-filer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/django-filer.svg)](https://anaconda.org/conda-forge/django-filer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/django-filer.svg)](https://anaconda.org/conda-forge/django-filer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/django-filer.svg)](https://anaconda.org/conda-forge/django-filer) |
 
 Installing django-filer
 =======================
