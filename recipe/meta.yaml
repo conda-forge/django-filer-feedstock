@@ -5,7 +5,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/d/django-filer/django-filer-{{ version }}.tar.gz
   sha256: 192b8039d167d1fc71423f65dd0d9b67a296f4336a942dba95bcadc1fb734d81
 
