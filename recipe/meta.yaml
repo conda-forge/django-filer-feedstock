@@ -1,4 +1,4 @@
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 
 package:
   name: django-filer
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/django-filer/django-filer-{{ version }}.tar.gz
-  sha256: 816422a34634bf90346ca4310e3eacba94be2813e685bc02ba9018c7b8614639
+  sha256: 2b1116ca098da6bc17bcbf67bd2c376e1bc42868cd7bb8a4d4815a2f0430a077
 
 build:
   number: 0
