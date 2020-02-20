@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: django-filer
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/django-filer/django-filer-{{ version }}.tar.gz
-  sha256: 23562564e681c1292d6c9aadbe9cb14cca1c822dd6c6422c71e8009787603fbe
+  sha256: 3da256ab69edc0daed0ccc9a7de37d0548b16037d57684b5524ec34cf3e203fe
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
