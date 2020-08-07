@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: django-filer
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/django-filer/django-filer-{{ version }}.tar.gz
-  sha256: 23562564e681c1292d6c9aadbe9cb14cca1c822dd6c6422c71e8009787603fbe
+  sha256: 7bf8cda6cbdd02c30198c59dfe2027624ee70a204f2d4f6cc2a0a8563df9b286
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -33,9 +33,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'File and Image Management Application for django'
-  description: 
-    A file management application for django that makes handling of files and images a breeze.
+  summary: File and Image Management Application for django
+  description: A file management application for django that makes handling of files and images a breeze.
   doc_url: https://django-filer.readthedocs.io/
   dev_url: https://github.com/divio/django-filer
 
