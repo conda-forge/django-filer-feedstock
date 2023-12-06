@@ -1,33 +1,37 @@
-{% set version = "1.5.0" %}
+{% set name = "django-filer" %}
+{% set version = "3.1.1" %}
 
 package:
-  name: django-filer
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/django-filer/django-filer-{{ version }}.tar.gz
-  sha256: 23562564e681c1292d6c9aadbe9cb14cca1c822dd6c6422c71e8009787603fbe
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-filer-{{ version }}.tar.gz
+  sha256: c58628155ace4bb9f10f6ea9cdf92049b5961bd2ef82c5a3b76f09091f8af50d
 
 build:
-  number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.8
     - pip
   run:
-    - python
-    - django >=1.8,<1.11.999
-    - easy-thumbnails >=2,<2.5
-    - django-mptt >=0.6,<0.9
-    - django_polymorphic >=0.7,<1.4
-    - unidecode >=0.04,<0.05
+    - python >=3.8
+    - django >=3.2,<5.1
+    - django_polymorphic
+    - easy-thumbnails
 
 test:
   imports:
     - filer
+  commands:
+    - pip check
+  requires:
+    - pip
+
 about:
   home: https://github.com/divio/django-filer
   license: BSD-3-Clause
@@ -43,3 +47,4 @@ extra:
   recipe-maintainers:
     - cshaley
     - sannykr
+    - rxm7706
