@@ -1,5 +1,5 @@
 {% set name = "django-filer" %}
-{% set version = "3.2.1" %}
+{% set version = "3.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5100a60d13023e4d29dc060d087c929e06f83e3ce87ba01abcb8f1d6c1a90ca8
+  sha256: e896aef3ec93b91ff49aa6c27400702eb0aeb3204ae6a98ae3adce28cc784695
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.8
-    - django >=3.2,<5.1
+    - django >=3.2
     - django_polymorphic
     - easy-thumbnails
 # https://github.com/django-cms/django-filer/blob/master/setup.py#L10C1-L10C28 
