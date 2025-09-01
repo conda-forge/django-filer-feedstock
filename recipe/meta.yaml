@@ -1,5 +1,5 @@
 {% set name = "django-filer" %}
-{% set version = "3.3.1" %}
+{% set version = "3.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 397c0b0f313371cc9e0cd92b3f1b0023b8dd213d7ebd038d6e289437df027bd0
+  sha256: ca3b00fd52ec0abf6323e44480a91ae086e698bed7223cdffef2e29f0e4fb1de
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
