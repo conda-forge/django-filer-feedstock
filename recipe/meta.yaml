@@ -1,5 +1,5 @@
 {% set name = "django-filer" %}
-{% set version = "3.3.2" %}
+{% set version = "3.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: ca3b00fd52ec0abf6323e44480a91ae086e698bed7223cdffef2e29f0e4fb1de
+  sha256: 1c887dc368148ceabdd0df8436e6f9a39d4ff69a05b7846ee534b2b04a52812d
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     # https://github.com/django-cms/django-filer/blob/master/setup.py#L10C1-L10C28 
     # pip requirement is easy-thumbnails[svg] requiring svglib and reportlab
     # https://github.com/SmileyChris/easy-thumbnails/blob/master/setup.py#L39
-    - svglib
+    - svglib >=1.5.1,<1.6.dev0
     - reportlab
 
 test:
