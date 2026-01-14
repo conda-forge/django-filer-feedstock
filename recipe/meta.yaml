@@ -1,5 +1,5 @@
 {% set name = "django-filer" %}
-{% set version = "3.4.1" %}
+{% set version = "3.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 185bd07a38e5a7a42c9edb9b230a97d692d329c46b72795404f8a09b3872b3e1
+  sha256: ea7c137431c0376222bfca99f61d2878a55c3e26ad11e4a800009e82ffb51091
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - django-polymorphic !=4.9.0
     - python >={{ python_min }}
     - django >=3.2
     - django_polymorphic
