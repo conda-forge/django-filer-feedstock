@@ -20,16 +20,14 @@ requirements:
     - pip
     - setuptools
   run:
-    - django-polymorphic !=4.9.0
     - python >={{ python_min }}
     - django >=3.2
-    - django_polymorphic
+    - django_polymorphic <4.9.0
     - easy-thumbnails
     # https://github.com/django-cms/django-filer/blob/master/setup.py#L10C1-L10C28 
     # pip requirement is easy-thumbnails[svg] requiring svglib and reportlab
     # https://github.com/SmileyChris/easy-thumbnails/blob/master/setup.py#L39
     - svglib >=1.5.1,<1.6.dev0
-    - reportlab
 
 test:
   imports:
