@@ -24,6 +24,8 @@ requirements:
     - python >={{ python_min }}
     - django >=3.2
     - django_polymorphic <5.0
+    # django-polymorphic 4.11.7 requires typing-extensions
+    - typing-extensions
     - easy-thumbnails
     # https://github.com/django-cms/django-filer/blob/master/setup.py#L10C1-L10C28 
     # pip requirement is easy-thumbnails[svg] requiring svglib and reportlab
